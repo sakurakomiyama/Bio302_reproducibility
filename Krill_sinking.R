@@ -27,3 +27,9 @@ data |> pivot_longer(-Swarm_number) |>
              'w_outside'= 'Outside swarm')) +
   theme(axis.title.x = element_blank()) + 
   labs( y = "vertical velocity (w)")
+
+#################
+#  Git setup ####
+#################
+library(usethis)
+
