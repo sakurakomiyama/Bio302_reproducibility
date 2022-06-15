@@ -51,4 +51,12 @@ git_default_branch_rename()
 git_default_branch_configure(name = "main")
 use_github()
 
-#create_from_github("sakurakomiyama/BIO302") #To clone repository (No need to do when you create new project)
+
+
+#########################
+# package management ####
+#########################
+library(renv)
+renv::init() #initialize a new project-local environment with a private R library
+renv::snapshot()#save the state of the project library to the lockfile (called renv.lock)
+renv::restore()#revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems
